@@ -1,24 +1,52 @@
-.card{
-  .card_img{
-
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  max-width: 25rem;
+  max-height: 9rem;
+  margin-left: 1rem;
+  box-shadow: 0 1px 2px 2px #eff3c7;
+  .card_img {
+    max-width: 11rem;
+    max-height: 9rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0;
+    }
   }
-
-  .card_info{
-
+  .card_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    & span {
+      width: 100%;
+      margin: 0 0 0 1rem;
+    }
+    .card_status {
+      width: max-content;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.9rem;
+      line-height: 1rem;
+      color: #51E245;
+      background-color: rgba(48, 255, 30, 0.2);
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .card_name {
+      font-size: 1.1rem;
+      line-height: 1.5rem
+    }
+    .card_date {
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+      opacity: 0.4;
+    }
   }
-
-  .card_status{
-
-  }
-
-  .card_name{
-
-  }
-
-  .card_date{
-
-  }
-
 }
 
 

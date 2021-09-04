@@ -1,19 +1,19 @@
 import React from 'react';
-import './styles.module.scss';
+import classes from './styles.module.scss';
+import andreyPanasuk from '../../../images/andreyPanasuk.png';
 
 function mainPage(props) {
   return (
-    <div className="card">
-      <div className="card_img">
-        <img src={props.avatarUrl} alt="card of hero"/>
+    <div className={classes.card}>
+      <div className={classes.card_img}>
+        <img src={andreyPanasuk} alt="card of hero"/>
       </div>
-      <div className="card_info">
-        <p className="card_status">{props.status}</p>
-        <p className="card_name">{props.name}</p>
-        <p className="card_date">{props.date}</p>
+      <div className={classes.card_info}>
+        <span className={classes.card_status}>{props.status}</span>
+        <span className={classes.card_name}>{props.name}</span>
+        <span className={classes.card_date}>{props.date}</span>
       </div>
     </div>
   );
 }
-
 export default mainPage;

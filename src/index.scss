@@ -1,6 +1,10 @@
+@import "styles/vars";
+
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  color: $color-main;
+  font-family: $ff-main;
+  font-size: $fs-main;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;

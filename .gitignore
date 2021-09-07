@@ -2,10 +2,7 @@
 
 # dependencies
 /node_modules
-/config
-/scripts
 /.pnp
-/.idea
 .pnp.js
 
 # testing

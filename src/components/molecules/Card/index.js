@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import andreyPanasuk from '../../../images/andreyPanasuk.png';
 
-const Card = ({status, name, date}) => {
+const Card = ({id, status, name, birthday}) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImg}>
@@ -11,7 +11,7 @@ const Card = ({status, name, date}) => {
       <div className={styles.cardInfo}>
         <span className={styles.cardStatus}>{status}</span>
         <span className={styles.cardName}>{name}</span>
-        <span className={styles.cardDate}>{date}</span>
+        <span className={styles.cardDate}>{birthday}</span>
       </div>
     </div>
   );

@@ -3,9 +3,9 @@
 .card {
   display: flex;
   justify-items: center;
-  max-width: 33%;
+  max-width: 32%;
   height: auto;
-  margin-left: 1rem;
+  margin: 1rem 0 0 1rem;
   overflow: hidden;
   @include borderStyle();
   .cardImg {

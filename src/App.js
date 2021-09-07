@@ -1,5 +1,5 @@
 import React from "react";
-import MainPage from './components/organisms/mainPage/index';
+import MainPage from './components/organisms/MainPage/index';
 
 function App() {
   return (

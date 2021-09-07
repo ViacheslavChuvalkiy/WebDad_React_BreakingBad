@@ -1,8 +1,8 @@
 import React from 'react';
-import Card from '../../molecules/card/index'
+import Card from '../../molecules/Card/index'
 import styles from './styles.module.scss'
 
-const mainPage = () => {
+const MainPage = () => {
   return (
     <div>
       <h2>Каталог</h2>
@@ -17,4 +17,4 @@ const mainPage = () => {
     </div>
   );
 };
-export default mainPage;
+export default MainPage;

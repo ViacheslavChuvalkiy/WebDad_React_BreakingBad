@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import andreyPanasuk from '../../../images/andreyPanasuk.png';
 
-const mainPage = ({status, name, date}) => {
+const Card = ({status, name, date}) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardImg}>
@@ -16,4 +16,4 @@ const mainPage = ({status, name, date}) => {
     </div>
   );
 }
-export default mainPage;
+export default Card;

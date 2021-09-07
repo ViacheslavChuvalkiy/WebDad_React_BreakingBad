@@ -1,5 +1,5 @@
-@import "./src/styles/mixins";
-@import "./src/styles/vars";
+@import "./src/assets/mixins";
+@import "./src/assets/vars";
 .card {
   display: flex;
   justify-items: center;
@@ -19,7 +19,7 @@
     }
   }
   .cardInfo {
-    padding: 2rem 1rem;
+    padding: 1rem;
     text-align: left;
     & span {
       display: block;

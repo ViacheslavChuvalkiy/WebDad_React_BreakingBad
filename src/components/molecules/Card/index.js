@@ -1,16 +1,15 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import andreyPanasuk from '../../../images/andreyPanasuk.png';
 
-const Card = ({id, status, name, birthday}) => {
+const Card = ({id, status, name, birthday, img}) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} id={id}>
       <div className={styles.cardImg}>
-        <img src={andreyPanasuk} alt="card of hero"/>
+        <img src={img} alt="card of hero"/>
       </div>
       <div className={styles.cardInfo}>
         <span className={styles.cardStatus}>{status}</span>
-        <span className={styles.cardName}>{name}</span>
+        <span>{name}</span>
         <span className={styles.cardDate}>{birthday}</span>
       </div>
     </div>

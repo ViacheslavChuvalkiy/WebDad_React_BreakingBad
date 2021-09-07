@@ -48,7 +48,7 @@ const CartList = () => {
         {CartsData.map((item) => (
           <Card
             id = {item.id}
-            avatarUrl= {item.img}
+            img= {item.img}
             name= {item.name}
             status= {item.status}
             birthday= {item.birthday}

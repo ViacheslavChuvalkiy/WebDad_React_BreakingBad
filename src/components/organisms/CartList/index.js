@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 
 const CartList = () => {
 
-  const CartsData = [
+  const cartsData = [
     {
       id: uuidv4(),
       name: "Walter White",
@@ -45,7 +45,7 @@ const CartList = () => {
   return (
     <div>
       <div className={styles.cardList}>
-        {CartsData.map((item) => (
+        {cartsData.map((item) => (
           <Card
             id = {item.id}
             img= {item.img}

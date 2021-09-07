@@ -5,6 +5,7 @@
 /config
 /scripts
 /.pnp
+/.idea
 .pnp.js
 
 # testing
@@ -14,7 +15,6 @@
 /build
 
 # misc
-.idea
 .DS_Store
 .env.local
 .env.development.local

@@ -9,7 +9,6 @@ const CartList = ({cartsList}) => {
       <div className={styles.cardList}>
         {cartsList.map((item) => (
           <Card
-            id = {item.id}
             key = {item.id}
             img= {item.img}
             name= {item.name}

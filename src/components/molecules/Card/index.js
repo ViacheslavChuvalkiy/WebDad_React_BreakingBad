@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-const Card = ({id, status, name, birthday, img}) => {
+const Card = ({status, name, birthday, img}) => {
   return (
-    <div className={styles.card} id={id}>
+    <div className={styles.card}>
       <div className={styles.cardImg}>
         <img src={img} alt="card of hero"/>
       </div>

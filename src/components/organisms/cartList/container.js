@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import CardList from "./component";
-import {getCardList} from '../../../store/actions/getCardList'
+import getCardList from '../../../store/actions/getCardList'
 
 const CardsContainer = () => {
 
@@ -11,7 +11,7 @@ const CardsContainer = () => {
 
   const s = cardList.then( (data) => data.cardList);
 
-  console.log('cartsList');
+  console.log(s);
 
   // console.log(dispatch(getCardList).then((response) => {
   //   return response.cardList;

@@ -2,12 +2,11 @@ import React from 'react';
 import Card from '../../molecules/Card/index'
 import styles from './styles.module.scss'
 
-const CartList = ({cartsList}) => {
-
+const CardList = ({cardList}) => {
   return (
     <div>
       <div className={styles.cardList}>
-        {cartsList.map((item) => (
+        {cardList.map((item) => (
           <Card
             key = {item.id}
             img= {item.img}
@@ -21,4 +20,4 @@ const CartList = ({cartsList}) => {
   );
 };
 
-export default CartList;
+export default CardList;

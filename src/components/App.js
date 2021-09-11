@@ -1,5 +1,5 @@
 import React from "react";
-import CartList from './organisms/CartList/index'
+import CartList from './organisms/cartList/index'
 
 function App() {
   return (

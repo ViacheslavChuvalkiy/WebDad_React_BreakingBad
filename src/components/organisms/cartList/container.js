@@ -1,17 +1,18 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CardList from "./component";
-import getCardList from '../../../store/actions/getCardList'
+import {getCardListData} from '../../../store/actions/index'
 
 const CardsContainer = () => {
 
   const dispatch = useDispatch();
 
-  let cardList = dispatch(getCardList);
+  dispatch(getCardListData);
+  console.log(dispatch(getCardListData));
 
-  const s = cardList.then( (data) => data.cardList);
-
-  console.log(s);
+  //const s = cardList.then( (data) => data.cardList);
+  // const s = useSelector((state) => state.cartsListReducer.cartsList);
+  // console.log(s);
 
   // console.log(dispatch(getCardList).then((response) => {
   //   return response.cardList;
@@ -19,7 +20,7 @@ const CardsContainer = () => {
 
   //
   // const cardList = dispatch(getCardList);
-  return <CardList cardList={cardList}/>;
+  return <CardList cardList={useSelector.state}/>;
 };
 
 export const container = CardsContainer;

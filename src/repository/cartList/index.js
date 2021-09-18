@@ -4,12 +4,16 @@ class CardList {
 
   getCardList = async () => {
 
+    let result = { value: null, error : null}
+
     try {
       const response = await axios.get('https://www.breakingbadapi.com/api/characters?limit=10&offset=10');
-      return response.data
+      result.value = response.data
     } catch (e) {
-      return e.response.data
+      result.error = e.response
     }
+
+    return result;
   }
 };
 

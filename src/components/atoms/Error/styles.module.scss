@@ -1,0 +1,9 @@
+@import "./src/assets/vars";
+
+.error{
+  width: 20rem;
+  height: 10rem;
+  text-align: center;
+  color: red;
+  background-color: $color-main;
+}

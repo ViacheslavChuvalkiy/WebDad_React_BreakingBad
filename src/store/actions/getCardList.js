@@ -1,7 +1,7 @@
 import Repository from "../../repository";
 
 export function isLoadingData(value) {
-  return {type: "IS_LOADING_DATA", value}
+  return {type: "IS_LOADING_DATA", isLoadingData:value}
 }
 
 export function isError(value) {
@@ -16,13 +16,13 @@ export function getCardListData() {
 
   return async (dispatch) => {
     dispatch(isLoadingData(true));
-    const { value, error } = await Repository.ApiCore.getCardList();
+    const { value, error } = await Repository.APICardList.getCardList();
     if(error || !value) {
       dispatch(isError(true));
       dispatch(isLoadingData(false));
     }
     dispatch(сardListLoaded(value));
-    dispatch(isLoadingData(false));
+   dispatch(isLoadingData(false));
   };
 }
 

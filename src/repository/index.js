@@ -1,7 +1,7 @@
 import cardList from './cartList/index'
 
 class Repository {
-  APICardList: IAPICore = cardList
+  APICardList = cardList
 }
 
 export default new Repository()

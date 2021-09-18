@@ -6,18 +6,18 @@ const CardList = ({cardList}) => {
   return (
     <div>
       <div className={styles.cardList}>
-        {cardList.map((item) => (
+        {cardList.length &&
+        cardList.map((item) => (
           <Card
-            key = {item.id}
-            img= {item.img}
-            name= {item.name}
-            status= {item.status}
-            birthday= {item.birthday}
+            key={item.char_id}
+            img={item.img}
+            name={item.name}
+            status={item.status}
+            birthday={item.birthday}
           />
         ))}
       </div>
     </div>
   );
 };
-
 export default CardList;

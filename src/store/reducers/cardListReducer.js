@@ -1,18 +1,15 @@
-
 const initialState = {
   cardList: [],
   isLoadingData: false,
   error: null
 };
-
-
-function cardListReducer(state = initialState,action) {
-
+function cardListReducer(state = initialState, action) {
   switch (action.type) {
     case 'CARD_LIST_LOADED':
       return {
         ...state,
-        cardList : action.cardList};
+        cardList: action.cardList
+      };
     case 'IS_LOADING_DATA':
       return {
         ...state,
@@ -27,5 +24,4 @@ function cardListReducer(state = initialState,action) {
       return state
   }
 }
-
 export default cardListReducer;

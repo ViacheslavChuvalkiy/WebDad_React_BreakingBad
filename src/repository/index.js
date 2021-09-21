@@ -1,4 +1,4 @@
-import cardList from './cartList/index'
+import cardList from './cardList/index'
 
 class Repository {
   APICardList = cardList

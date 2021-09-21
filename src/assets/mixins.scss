@@ -1,15 +1,15 @@
 @import "vars";
 
 @mixin borderStyle() {
-  border-radius: 8px;
-  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 2px $color-boxShadow;
 }
 
 @mixin statusStyle() {
   width: max-content;
   padding: 0.5rem 1rem;
-  color: #51E245;
-  background-color: rgba(48, 255, 30, 0.2);
+  color: $color-status;
+  background-color: $color-bgStatus;
   font-size: $fs-small;
   line-height: 1rem;
 }

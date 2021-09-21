@@ -1,10 +1,10 @@
 import React from "react";
-import CartList from './organisms/cartList/index'
+import CardList from './organisms/CardList/'
 
 function App() {
   return (
     <div>
-       <CartList/>
+       <CardList/>
     </div>
   );
 }

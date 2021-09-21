@@ -1,13 +1,14 @@
 import React from 'react';
-import Card from '../../molecules/Card/index'
-import styles from './styles.module.scss'
+import Card from '../../molecules/Card/';
+import Loader from "../../atoms/Loader/";
+import Error from "../../atoms/Error/";
+import styles from './styles.module.scss';
 
-const CardList = ({cardList}) => {
-  return (
+const CardList = ({cardList,isLoader,error}) => {
+  return ( error ? <Error error={error}/> : isLoader ? <Loader/> :
     <div>
       <div className={styles.cardList}>
-        {cardList.length &&
-        cardList.map((item) => (
+        {cardList.map((item) => (
           <Card
             key={item.char_id}
             img={item.img}

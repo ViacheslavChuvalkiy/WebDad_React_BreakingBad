@@ -4,6 +4,7 @@
   display: flex;
   justify-items: center;
   height: auto;
+  max-height: 11rem;
   margin: 1rem 0 0 1rem;
   overflow: hidden;
   @include borderStyle();

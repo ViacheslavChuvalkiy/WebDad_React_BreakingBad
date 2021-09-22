@@ -1,7 +1,7 @@
 const initialState = {
   cardList: [],
   isLoadingData: false,
-  error: null
+  isError: null
 };
 function cardListReducer(state = initialState, action) {
   switch (action.type) {
@@ -18,7 +18,7 @@ function cardListReducer(state = initialState, action) {
     case 'IS_ERROR':
       return {
         ...state,
-        error: action
+        isError: action
       };
     default:
       return state

@@ -7,7 +7,7 @@ const CardsContainer = () => {
   const dispatch = useDispatch();
   const cardList = useSelector((state) => state.cardListReducer.cardList);
   const isLoader = useSelector((state) => state.cardListReducer.isLoadingData);
-  const isError = useSelector((state) => state.cardListReducer.error);
+  const isError = useSelector((state) => state.cardListReducer.isError);
 
   useEffect(() => {
     dispatch(getCardListData());
@@ -16,7 +16,7 @@ const CardsContainer = () => {
   return <CardList
     cardList = {cardList}
     isLoader = {isLoader}
-    error    = {isError}
+    isError = {isError}
   />;
 };
 export const container = CardsContainer;

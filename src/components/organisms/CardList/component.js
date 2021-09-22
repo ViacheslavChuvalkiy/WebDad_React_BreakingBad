@@ -1,11 +1,11 @@
 import React from 'react';
-import Card from '../../molecules/Card/';
-import Loader from "../../atoms/Loader/";
-import Error from "../../atoms/Error/";
+import Card from '../../molecules/Card';
+import Loader from "../../atoms/Loader";
+import Error from "../../atoms/Error";
 import styles from './styles.module.scss';
 
-const CardList = ({cardList,isLoader,error}) => {
-  return ( error ? <Error error={error}/> : isLoader ? <Loader/> :
+const CardList = ({cardList, isLoader, isError}) => {
+  return ( isError ? <Error/> : isLoader ? <Loader/> :
     <div>
       <div className={styles.cardList}>
         {cardList.map((item) => (

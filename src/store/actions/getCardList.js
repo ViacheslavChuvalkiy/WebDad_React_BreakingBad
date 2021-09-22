@@ -9,8 +9,8 @@ export function isError(value) {
 export function сardListLoaded(value) {
   return {type: "CARD_LIST_LOADED", cardList: value}
 }
-export function getCardListData() {
-  return async (dispatch) => {
+export const getCardListData = () => async (dispatch) =>
+  {
     dispatch(isLoadingData(true));
     const {value, error} = await Repository.APICardList.getCardList();
     if (error || !value) {
@@ -20,5 +20,5 @@ export function getCardListData() {
     dispatch(сardListLoaded(value));
     dispatch(isLoadingData(false));
   };
-}
+
 

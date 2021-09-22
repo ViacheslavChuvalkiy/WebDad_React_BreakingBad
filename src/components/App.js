@@ -4,9 +4,8 @@ import CardList from './organisms/CardList/'
 function App() {
   return (
     <div>
-       <CardList/>
+      <CardList/>
     </div>
   );
 }
-
 export default App;

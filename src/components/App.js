@@ -1,15 +1,15 @@
 import React from "react";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import MainPage from './organisms/MainPage'
-import CardList from './organisms/CardList'
-import Person from './molecules/Person'
+import MainPage from '../pages/MainPage'
+import Catalog from '../pages/Catalog'
+import Person from '../pages/Person'
 
 function App() {
   return (
     <div>
       <Router>
         <Route path="/" component={MainPage} exact={true}/>
-        <Route path="/cardList" component={CardList}/>
+        <Route path="/catalog" component={Catalog}/>
         <Route path="/person" component={Person}/>
       </Router>
     </div>

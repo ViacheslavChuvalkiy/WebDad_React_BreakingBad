@@ -20,5 +20,3 @@ export const getCardListData = () => async (dispatch) =>
     dispatch(сardListLoaded(value));
     dispatch(isLoadingData(false));
   };
-
-

@@ -1,10 +1,11 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import PersonPage from "../../components/molecules/Person";
 
-const Person = () => {
+const Person = ({match}) => {
   return (
     <div>
-      <h2>Person</h2>
+      <PersonPage
+      id = {match.params.id}/>
     </div>
   );
 }

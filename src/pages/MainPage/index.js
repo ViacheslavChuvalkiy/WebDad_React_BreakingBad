@@ -1,9 +1,8 @@
 import React from 'react';
-import styles from './styles.module.scss';
 
 const MainPage = () => {
   return (
-    <div className={styles.card}>
+    <div>
         <h2>Main page</h2>
     </div>
   );

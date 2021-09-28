@@ -1,7 +1,7 @@
 import cardList from './cardList'
-import person from './person'
+import persons from './persons'
 class Repository {
   APICardList = cardList;
-  APIPerson = person
+  APIPersons = persons
 }
 export default new Repository()

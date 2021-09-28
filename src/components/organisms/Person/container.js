@@ -2,24 +2,26 @@ import {React, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
 import Person from "./component";
-import {getPersonData} from '../../../store/actions/getPerson'
+import {getPersonsData} from '../../../store/actions/getPersons'
 
 const PersonContainer = () => {
 
   const dispatch = useDispatch();
-  const person = useSelector((state) => state.personReducer.person);
-  const isLoader = useSelector((state) => state.personReducer.isLoadingData);
-  const isError =  useSelector((state) => state.personReducer.isError);
+  const persons = useSelector((state) => state.personsReducer.persons);
+  const isLoader = useSelector((state) => state.personsReducer.isLoadingData);
+  const isError =  useSelector((state) => state.personsReducer.isError);
   const {id} = useParams();
 
+
   useEffect(() => {
-    dispatch(getPersonData(id));
+    dispatch(getPersonsData());
   }, [dispatch]);
 
   return <Person
-    person = {person}
+    persons = {persons}
     isLoader = {isLoader}
     isError = {isError}
+    id = {id}
   />;
 };
 export const container = PersonContainer;

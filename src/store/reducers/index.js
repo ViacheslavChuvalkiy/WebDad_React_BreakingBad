@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import cardListReducer from './cardListReducer'
-import personReducer from './personReducer'
+import personsReducer from './personsReducer'
 
 const reducers = combineReducers({
   cardListReducer,
-  personReducer
+  personsReducer
 });
 
 export default reducers

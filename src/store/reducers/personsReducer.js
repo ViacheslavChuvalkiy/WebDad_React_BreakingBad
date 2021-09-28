@@ -1,15 +1,14 @@
 const initialState = {
-  person: [],
-  quote : '',
+  persons: [],
   isLoadingData: false,
   isError: null
 };
-function personReducer(state = initialState, action) {
+function personsReducer(state = initialState, action) {
   switch (action.type) {
-    case 'PERSON_LOADED':
+    case 'PERSONS_LOADED':
       return {
         ...state,
-        person: action.person
+        persons: action.persons
       };
     case 'IS_LOADING_DATA':
       return {
@@ -25,4 +24,4 @@ function personReducer(state = initialState, action) {
       return state
   }
 }
-export default personReducer;
+export default personsReducer;

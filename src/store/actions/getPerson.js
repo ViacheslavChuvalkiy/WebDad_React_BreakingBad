@@ -23,7 +23,8 @@ export const getPersonData = (id) => async (dispatch) =>
       dispatch(isError(true));
       dispatch(isLoadingData(false));
     }
-    value[0].quote = response.value[0].quote;
+
+    value = {...value[0], ...response.value[0]};
     dispatch(personLoaded(value));
     dispatch(isLoadingData(false));
   };

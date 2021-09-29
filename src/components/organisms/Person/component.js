@@ -3,8 +3,8 @@ import styles from './styles.module.scss';
 import Error from "../../atoms/Error";
 import Loader from "../../atoms/Loader";
 
-const Person = ({persons, isLoader, isError, id}) => {
-  let {img, name, status, birthday, nickname} = persons.length ? persons.filter((item) => item.char_id == id)[0] : {};
+const Person = ({person, isLoader, isError}) => {
+  let {img, name, status, birthday, nickname} = person;
   return (isError ? <Error/> : isLoader ? <Loader/> :
       <div className={styles.person}>
         <div className={styles.personImg}>

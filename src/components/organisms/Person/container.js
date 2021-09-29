@@ -13,11 +13,12 @@ const PersonContainer = () => {
   useEffect(() => {
     dispatch(getPersonsData());
   }, [dispatch]);
+
+  const person = persons.length ? persons.filter((item) => item.char_id == id)[0] : [];
   return <Person
-    persons={persons}
+    person={person}
     isLoader={isLoader}
     isError={isError}
-    id={id}
   />;
 };
 export const container = PersonContainer;

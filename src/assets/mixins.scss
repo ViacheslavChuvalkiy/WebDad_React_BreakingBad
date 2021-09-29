@@ -5,6 +5,15 @@
   box-shadow: 0 0.2rem 0.3rem 0.3rem $color-boxShadow;
 }
 
+@mixin btnCatalogStyle() {
+  width: 8rem;
+  height: 1.7rem;
+  font-size: $fs-main;
+  color: $color-main;
+  border: 0.15rem solid $color-yellow;
+  background-color: $color-white;
+}
+
 @mixin statusStyle() {
   width: max-content;
   padding: 0.5rem 1rem;

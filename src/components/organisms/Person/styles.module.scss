@@ -12,7 +12,7 @@
     max-width: 32rem;
     max-height: 40rem;
     & img {
-      margin: 0 0 0 3rem;
+      margin: 0 0 0 4rem;
       width: 100%;
       height: inherit;
       object-fit: contain;
@@ -33,7 +33,7 @@
       width: 70%;
       margin: 2rem 0 0 1rem;
       font-size: $fs-main;
-      color: $color-grey;
+      color: $grey;
       line-height: $lh-main;
     }
     & span {

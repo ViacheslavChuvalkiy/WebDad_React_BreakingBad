@@ -6,12 +6,12 @@
 }
 
 @mixin btnCatalogStyle() {
-  width: 8rem;
-  height: 1.7rem;
+  width: 7rem;
+  height: 1.9rem;
   font-size: $fs-main;
   color: $color-main;
-  border: 0.15rem solid $color-yellow;
-  background-color: $color-white;
+  border: 0.15rem solid $yellow;
+  background-color: $white;
 }
 
 @mixin statusStyle() {
@@ -25,7 +25,12 @@
 
 @mixin dateStyle() {
   font-size: $fs-small;
-  color: $color-grey;
+  color: $grey;
+}
+
+@mixin linkStyle() {
+  color: inherit;
+  text-decoration: none;
 }
 
 @mixin hoverCardStyle(){

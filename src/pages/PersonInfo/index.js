@@ -1,10 +1,10 @@
 import React from 'react';
-import PersonPage from "../../components/organisms/Person";
+import PersonInfo from "../../components/organisms/PersonInfo";
 
 const Person = () => {
   return (
     <div>
-      <PersonPage/>
+      <PersonInfo/>
     </div>
   );
 }

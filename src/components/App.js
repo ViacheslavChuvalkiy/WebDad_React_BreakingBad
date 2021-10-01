@@ -2,7 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import MainPage from '../pages/MainPage'
 import Catalog from '../pages/Catalog'
-import Person from '../pages/Person'
+import Person from '../pages/PersonInfo'
 import Header from "../components/organisms/Header";
 
 function App() {

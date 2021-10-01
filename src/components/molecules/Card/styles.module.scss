@@ -5,7 +5,7 @@
   justify-items: center;
   height: 100%;
   max-height: 11rem;
-  margin: 1rem 0 0 1rem;
+  margin: 1rem 0 0 0;
   overflow: hidden;
   @include borderStyle();
   &:hover {
@@ -24,7 +24,7 @@
   .cardInfo {
     padding: 1rem;
     text-align: left;
-    & span {
+    .cardName {
       display: block;
       width: 100%;
       margin: 1rem 0 0 0;
@@ -35,6 +35,11 @@
     .cardDate {
       @include dateStyle();
     }
+  }
+}
+@media (max-width: 1155px) {
+  .cardName {
+    min-height: 3rem;
   }
 }
 

@@ -1,0 +1,129 @@
+@import "./src/assets/mixins";
+@import "./src/assets/vars";
+.person {
+  display: flex;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  .personImg {
+    width: 40%;
+    max-width: 32rem;
+    max-height: 40rem;
+    & img {
+      margin: 0 0 0 4rem;
+      width: 100%;
+      height: inherit;
+      object-fit: contain;
+      padding: 0;
+    }
+  }
+  .personName {
+    display: block;
+    font-size: $fs-large;
+    color: $color-main;
+  }
+  .personInfo {
+    width: 50%;
+    padding: 0.5rem 0 0.5rem 7rem;
+    text-align: left;
+    & p {
+      display: block;
+      width: 70%;
+      margin: 2rem 0 0 1rem;
+      font-size: $fs-main;
+      color: $grey;
+      line-height: $lh-main;
+    }
+    & span {
+      margin: 2rem 0 0 1rem;
+      color: $color-main;
+    }
+    .personStatus {
+      @include statusStyle();
+    }
+    .personDate {
+      @include dateStyle();
+      font-size: $fs-main;
+    }
+  }
+}
+@media (max-width: 1250px) {
+  .person {
+    .personImg {
+      & img {
+        margin: 0 0 0 2rem;
+      }
+    }
+  ;
+    .personInfo {
+      padding: 0 0 8px 80px;
+      & p {
+        width: 90%;
+      }
+    }
+  }
+}
+@media (max-width: 905px) {
+  .navHeader {
+    .searchBlock {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .person {
+    .personInfo {
+      padding: 0 0 8px 45px;
+      & p, & span {
+        margin: 10px 0 0 16px;
+      }
+    }
+  }
+}
+@media (max-width: 470px) {
+  .person {
+    .personName {
+      padding: 20px 0 0 0;
+      font-size: 20px !important;
+    }
+    .personInfo {
+      & p, & span, .personDate {
+        margin: 10px 0 0 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .person {
+    .personInfo {
+      padding: 0 0 8px 30px;
+      & p, & span, .personDate {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 370px) {
+  .person {
+    .personName {
+      padding: 8px 0 0 0;
+    }
+    .personInfo {
+      padding: 0 0 8px 40px;
+      & p, & span, .personDate {
+        width: 90%;
+      }
+    }
+  }
+}
+@media (max-width: 340px) {
+  .person {
+    .personInfo {
+      & p:last-child {
+        display: none;
+      }
+    }
+  }
+}

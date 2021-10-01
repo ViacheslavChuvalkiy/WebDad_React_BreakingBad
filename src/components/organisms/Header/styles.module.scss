@@ -6,7 +6,7 @@
   height: auto;
   align-items: center;
   max-height: 7rem;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
   & img {
     width: 5rem;
     height: 4rem;
@@ -31,7 +31,17 @@
     top: 0.05rem;
     font-size: 1.3rem;
   }
-  .bg_yellow{
+  .bg_yellow {
     background-color: $yellow;
+  }
+}
+@media (max-width: 1250px) {
+  .header {
+    padding: 16px 32px;
+  }
+}
+@media (max-width: 580px) {
+  .padding {
+    padding: 16px;
   }
 }

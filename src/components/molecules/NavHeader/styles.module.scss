@@ -1,51 +1,49 @@
 @import "./src/assets/vars";
 @import "./src/assets/mixins";
-.navHeader{
+.navHeader {
   display: block;
   width: 100%;
   height: 4rem;
-  .hide{
+  .hide {
     display: none;
   }
-
-  .linkBlock{
+  .linkBlock {
     @include linkStyle();
-    & span{
+    & span {
       position: relative;
       font-size: $fs-main;
       color: $black;
-      margin: 1rem 0 1rem 7rem;
+      margin: 1rem 0 1rem 6rem;
       top: 30%;
     }
   }
-
-  .linkBlock:before{
+  .linkBlock:before {
     content: '\2190';
     position: absolute;
-    margin: 0.7rem 0 0 5rem;
+    margin: 0.7rem 0 0 4rem;
     color: $yellow;
     font-size: $fs-big;
   }
-  .searchBlock{
+  .searchBlock {
     display: flex;
     justify-content: center;
     width: 40%;
     margin: 0 auto;
     @include borderStyle();
-    & input{
+    & input {
       width: 80%;
       border: none;
+      padding: 0 1rem;
     }
-    & input:focus{
+    & input:focus {
       outline: none;
     }
-    & img{
+    & img {
       width: $fs-big;
       height: $fs-big;
       padding: 0.3rem 0;
     }
-
-    & span{
+    & span {
       position: relative;
       font-size: $fs-main;
       color: $black;
@@ -54,4 +52,29 @@
     }
   }
 }
-
+@media (max-width: 1250px) {
+  .navHeader {
+    .linkBlock {
+      & span {
+        margin: 1rem 0 1rem 4rem;
+      }
+    }
+    .linkBlock:before {
+      margin: 0.7rem 0 0 2rem;
+    }
+  }
+}
+@media (max-width: 905px) {
+  .navHeader {
+    .searchBlock {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .navHeader {
+    .searchBlock {
+      width: 80%;
+    }
+  }
+}

@@ -31,3 +31,9 @@
 @mixin hoverCardStyle() {
   box-shadow: 0 0.2rem 0.3rem 0.3rem $color-hoverBoxShadow;
 }
+
+@mixin flexStyle(){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

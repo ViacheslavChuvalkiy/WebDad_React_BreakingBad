@@ -4,6 +4,7 @@ import MainPage from '../pages/MainPage'
 import Catalog from '../pages/Catalog'
 import Person from '../pages/PersonInfo'
 import Header from "../components/organisms/Header";
+import Footer from "../components/organisms/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" component={MainPage} exact={true}/>
         <Route path="/catalog" component={Catalog}/>
         <Route path="/person/:id" component={Person}/>
+        <Footer/>
       </Router>
     </div>
   );

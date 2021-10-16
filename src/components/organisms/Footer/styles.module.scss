@@ -1,0 +1,10 @@
+@import "./src/assets/vars";
+@import "./src/assets/mixins";
+.footer {
+  margin: 3rem 0 0 0;
+  width: 90%;
+  ul{
+    @include flexStyle();
+    list-style: none;
+  }
+}

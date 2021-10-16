@@ -1,5 +1,9 @@
 @import "vars";
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: calc(100vw - (100vw - 100%));
   margin: 0;
   color: $color-main;
   font-family: $ff-main;
@@ -7,5 +11,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
+
 }
 

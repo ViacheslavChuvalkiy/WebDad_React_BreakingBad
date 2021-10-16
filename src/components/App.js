@@ -8,7 +8,6 @@ import Footer from "../components/organisms/Footer";
 
 function App() {
   return (
-    <div>
       <Router>
         <Header/>
         <Route path="/" component={MainPage} exact={true}/>
@@ -16,7 +15,6 @@ function App() {
         <Route path="/person/:id" component={Person}/>
         <Footer/>
       </Router>
-    </div>
   );
 }
 export default App;

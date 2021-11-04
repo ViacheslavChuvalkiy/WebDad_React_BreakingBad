@@ -13,10 +13,14 @@
   }
   .catalogLink {
     @include linkStyle();
+    &:hover {
+      cursor: pointer;
+    }
   }
   & button {
     @include btnCatalogStyle();
     position: relative;
+    cursor: pointer;
   }
   & span {
     margin-left: 1.3rem;

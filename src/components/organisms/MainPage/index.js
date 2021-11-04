@@ -6,10 +6,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 const MainPage = () => {
   return (
     <div className={styles.mainPage}>
-      {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
       <LazyLoadImage
         src={mainPhoto}
-        alt={"breaking bad"}
+        alt="breaking bad"
        />
     </div>
   );

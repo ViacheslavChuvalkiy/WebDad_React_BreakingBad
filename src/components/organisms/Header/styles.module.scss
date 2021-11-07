@@ -4,14 +4,16 @@
   @include flexStyle();
   height: auto;
   max-height: 7rem;
-  padding: 1rem 4rem;
+  padding: 0 6rem;
   & img {
-    width: 6rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     object-fit: contain;
     padding: 0;
   }
   .catalogLink {
+    width: 8rem;
+    height: 2.5rem;
     @include linkStyle();
     &:hover {
       cursor: pointer;
@@ -30,7 +32,7 @@
     content: '\2261';
     position: absolute;
     left: 0.8rem;
-    top: 0.05rem;
+    top: 0.3rem;
     font-size: 1.3rem;
   }
   .bg_yellow {

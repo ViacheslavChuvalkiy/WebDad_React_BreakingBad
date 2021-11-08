@@ -5,16 +5,17 @@
   justify-items: center;
   width: 100%;
   height: 100%;
+  padding: 2rem 0 0 0;
   overflow: hidden;
   .personImg {
     width: 40%;
     max-width: 32rem;
-    max-height: 40rem;
+    max-height: 26rem;
     & img {
       margin: 0 0 0 4rem;
       width: 100%;
-      height: inherit;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
       padding: 0;
     }
   }

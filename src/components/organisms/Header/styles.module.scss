@@ -1,6 +1,6 @@
 @import "./src/assets/mixins";
 @import "./src/assets/vars";
-.header {
+header {
   @include flexStyle();
   height: auto;
   max-height: 7rem;
@@ -37,10 +37,11 @@
   }
   .bg_yellow {
     background-color: $yellow;
+    cursor: default !important;
   }
 }
 @media (max-width: 1250px) {
-  .header {
+  header {
     padding: 16px 32px;
   }
 }

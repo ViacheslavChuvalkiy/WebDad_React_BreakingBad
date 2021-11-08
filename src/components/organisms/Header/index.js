@@ -7,29 +7,28 @@ import NavHeader from '../../molecules/NavHeader'
 const Header = () => {
   const isCatalogPage = useLocation().pathname === "/catalog";
   const isMainPage = useLocation().pathname === "/";
-  const isPersonPage = !isCatalogPage && !isMainPage;
   const btnClasses = [];
-  if (isPersonPage) {
+  if (isCatalogPage) {
     btnClasses.push('bg_yellow');
   }
   return (
-    <div>
-      <div className={styles.header}>
+    <>
+      <header style={styles}>
         <Link to={'/'}>
           <img src={logo} alt="logo"/>
         </Link>
-        <Link to={!isPersonPage ? '/catalog' : '#'} className={styles.catalogLink}>
+        <Link to={!isCatalogPage ? '/catalog' : '#'} className={styles.catalogLink}>
           <button className={styles[btnClasses[0]]} disabled={!isMainPage}>
             <span>Каталог</span>
           </button>
         </Link>
-      </div>
+      </header>
       {!isMainPage &&
       <NavHeader
         isCatalogPage={isCatalogPage}
       />
       }
-    </div>
+    </>
   );
 };
 export default Header;

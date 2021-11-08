@@ -2,13 +2,16 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 const Footer = () => {
+
+  let year = new Date().getFullYear();
+
   return (
-    <div className={styles.footer}>
+    <footer style={styles}>
       <ul>
-        <li>2021</li>
+        <li>{year}</li>
         <li>©Chuvalskyi Viacheslav</li>
       </ul>
-    </div>
+    </footer>
   );
 };
 export default Footer;

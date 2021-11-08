@@ -1,6 +1,6 @@
 @import "./src/assets/vars";
 @import "./src/assets/mixins";
-.footer {
+footer {
   width: 100%;
   ul{
     @include flexStyle();

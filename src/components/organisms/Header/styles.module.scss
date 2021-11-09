@@ -1,10 +1,11 @@
 @import "./src/assets/mixins";
 @import "./src/assets/vars";
-header {
-  @include flexStyle();
-  height: auto;
-  max-height: 7rem;
-  padding: 0 6rem;
+.header {
+  width: 100%;
+  .container {
+    @include container;
+    @include flexStyle();
+  }
   & img {
     width: 5rem;
     height: 5rem;
@@ -29,7 +30,7 @@ header {
     padding: 0.2rem 0.5rem;
   }
   & span:before {
-    content: '\2261';
+    content: "\2261";
     position: absolute;
     left: 0.8rem;
     top: 0.3rem;
@@ -40,11 +41,11 @@ header {
     cursor: default !important;
   }
 }
-@media (max-width: 1250px) {
-  header {
-    padding: 16px 32px;
-  }
-}
+//@media (max-width: 1250px) {
+//  .header {
+//    padding: 16px 32px;
+//  }
+//}
 @media (max-width: 580px) {
   .padding {
     padding: 16px;

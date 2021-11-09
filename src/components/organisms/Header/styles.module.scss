@@ -1,0 +1,53 @@
+@import "./src/assets/mixins";
+@import "./src/assets/vars";
+.header {
+  width: 100%;
+  .container {
+    @include container;
+    @include flexStyle();
+  }
+  & img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    padding: 0;
+  }
+  .catalogLink {
+    width: 8rem;
+    height: 2.5rem;
+    @include linkStyle();
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & button {
+    @include btnCatalogStyle();
+    position: relative;
+    cursor: pointer;
+  }
+  & span {
+    margin-left: 1.3rem;
+    padding: 0.2rem 0.5rem;
+  }
+  & span:before {
+    content: "\2261";
+    position: absolute;
+    left: 0.8rem;
+    top: 0.3rem;
+    font-size: 1.3rem;
+  }
+  .bg_yellow {
+    background-color: $yellow;
+    cursor: default !important;
+  }
+}
+//@media (max-width: 1250px) {
+//  .header {
+//    padding: 16px 32px;
+//  }
+//}
+@media (max-width: 580px) {
+  .padding {
+    padding: 16px;
+  }
+}

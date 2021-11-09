@@ -1,5 +1,15 @@
-.loader{
+.loader {
+  width: 15rem;
+  height: 15rem;
   display: block;
   text-align: center;
-  margin: 5rem 0 0 0;
+  margin: 5rem auto 0 auto;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    width: 10rem;
+    height: 10rem;
+  }
 }

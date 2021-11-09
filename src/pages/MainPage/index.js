@@ -1,10 +1,9 @@
 import React from 'react';
+import MainPageComponent from '../../components/organisms/MainPage/'
 
 const MainPage = () => {
   return (
-    <div>
-        <h2>Main page</h2>
-    </div>
+  <MainPageComponent/>
   );
 };
 

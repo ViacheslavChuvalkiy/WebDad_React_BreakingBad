@@ -15,6 +15,7 @@ const CardsContainer = () => {
     cardList={cardList}
     isLoader={isLoader}
     isError={isError}
+    isCatalogPage = {true}
   />;
 };
 export const container = CardsContainer;

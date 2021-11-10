@@ -18,6 +18,7 @@ const PersonContainer = () => {
     person={person}
     isLoader={isLoader}
     isError={isError}
+    isCatalogPage = {false}
   />;
 };
 export const container = PersonContainer;

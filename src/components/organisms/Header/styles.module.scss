@@ -6,7 +6,7 @@
     @include container;
     @include flexStyle();
   }
-  & img {
+   img {
     width: 5rem;
     height: 5rem;
     object-fit: contain;
@@ -25,11 +25,11 @@
     position: relative;
     cursor: pointer;
   }
-  & span {
+    span {
     margin-left: 1.3rem;
     padding: 0.2rem 0.5rem;
   }
-  & span:before {
+     span:before {
     content: "\2261";
     position: absolute;
     left: 0.8rem;
@@ -41,13 +41,4 @@
     cursor: default !important;
   }
 }
-//@media (max-width: 1250px) {
-//  .header {
-//    padding: 16px 32px;
-//  }
-//}
-@media (max-width: 580px) {
-  .padding {
-    padding: 16px;
-  }
-}
+

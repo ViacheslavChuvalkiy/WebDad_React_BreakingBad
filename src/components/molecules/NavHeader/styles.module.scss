@@ -13,13 +13,13 @@
       position: relative;
       font-size: $fs-main;
       color: $black;
-      margin: 1rem 0 1rem 6rem;
+      margin: 1rem 0 1rem 2rem;
       top: 30%;
     }
     &:before {
       content: '\2190';
       position: absolute;
-      margin: 0 0 0 4rem;
+      margin: 0.7rem 0 0 0;
       color: $yellow;
       font-size: $fs-big;
     }
@@ -53,29 +53,11 @@
     }
   }
 }
-@media (max-width: 1250px) {
-  .navHeader {
-    .linkBlock {
-      span {
-        margin: 1rem 0 1rem 4rem;
-      }
-      &:before {
-        margin: 0 0 0 2rem;
-      }
-    }
-  }
-}
+
 @media (max-width: 905px) {
   .navHeader {
     .searchBlock {
       width: 50%;
-    }
-  }
-}
-@media (max-width: 500px) {
-  .navHeader {
-    .searchBlock {
-      width: 80%;
     }
   }
 }

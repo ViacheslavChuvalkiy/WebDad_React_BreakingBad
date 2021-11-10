@@ -3,16 +3,15 @@
 .person {
   display: flex;
   justify-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  padding: 2rem 0 0 0;
-  overflow: hidden;
+  @include container;
   .personImg {
     width: 40%;
     max-width: 32rem;
-    max-height: 26rem;
+    max-height: 30rem;
     & img {
-      margin: 0 0 0 4rem;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -26,18 +25,18 @@
   }
   .personInfo {
     width: 50%;
-    padding: 0.5rem 0 0.5rem 7rem;
+    padding: 0.5rem 0 0.5rem 2rem;
     text-align: left;
     & p {
       display: block;
       width: 70%;
-      margin: 2rem 0 0 1rem;
+      margin: 1rem 0 0 1rem;
       font-size: $fs-main;
       color: $grey;
       line-height: $lh-main;
     }
     & span {
-      margin: 2rem 0 0 1rem;
+      margin: 1rem 0 0 1rem;
       color: $color-main;
     }
     .personStatus {
@@ -51,14 +50,8 @@
 }
 @media (max-width: 1250px) {
   .person {
-    .personImg {
-      & img {
-        margin: 0 0 0 2rem;
-      }
-    }
-  ;
     .personInfo {
-      padding: 0 0 8px 80px;
+      padding: 0 0 8px 20px;
       & p {
         width: 90%;
       }
@@ -74,8 +67,9 @@
 }
 @media (max-width: 600px) {
   .person {
+    padding: 0 1rem 2rem 0;
     .personInfo {
-      padding: 0 0 8px 45px;
+      padding: 16px 0 8px 16px;
       & p, & span {
         margin: 10px 0 0 16px;
       }
@@ -84,46 +78,17 @@
 }
 @media (max-width: 470px) {
   .person {
+    .personImg {
+      width: 100%;
+    }
     .personName {
       padding: 20px 0 0 0;
-      font-size: 20px !important;
     }
     .personInfo {
+      width: 100%;
       & p, & span, .personDate {
         margin: 10px 0 0 10px;
         font-size: 14px;
-      }
-    }
-  }
-}
-@media (max-width: 400px) {
-  .person {
-    .personInfo {
-      padding: 0 0 8px 30px;
-      & p, & span, .personDate {
-        font-size: 12px;
-      }
-    }
-  }
-}
-@media (max-width: 370px) {
-  .person {
-    .personName {
-      padding: 8px 0 0 0;
-    }
-    .personInfo {
-      padding: 0 0 8px 40px;
-      & p, & span, .personDate {
-        width: 90%;
-      }
-    }
-  }
-}
-@media (max-width: 340px) {
-  .person {
-    .personInfo {
-      & p:last-child {
-        display: none;
       }
     }
   }

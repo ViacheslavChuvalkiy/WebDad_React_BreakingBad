@@ -13,12 +13,12 @@
   .cardImg {
     flex: 0 0 7.5rem;
     height: 100%;
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      padding: 0;
-    }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 0;
+      }
   }
   .cardInfo {
     padding: 1rem;

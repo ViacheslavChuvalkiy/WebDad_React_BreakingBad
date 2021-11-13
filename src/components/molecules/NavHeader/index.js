@@ -8,8 +8,10 @@ const NavHeader = ({isCatalogPage}) => {
     <div className={styles.navHeader}>
       <label className={isCatalogPage ? styles.searchBlock : styles.hide}>
         <input type="text" name="search" placeholder={'Поиск'}/>
-        <img src={lens} alt="линза"/>
-        <span>Найти</span>
+        <div className={styles.searchBtn}>
+          <img src={lens} alt="линза"/>
+          <span>Найти</span>
+        </div>
       </label>
       <Link to={'/catalog'} className={isCatalogPage ? styles.hide : styles.linkBlock}>
         <span> Назад в Каталог </span>

@@ -4,9 +4,10 @@ import Error from "../../atoms/Error";
 import Loader from "../../atoms/Loader";
 import NavHeader from "../../molecules/NavHeader";
 
-const Person = ({person, isLoader, isError,isCatalogPage}) => {
+const Person = ({person,quote,isLoader, isError, isLoaderQuote, isErrorQuote,isCatalogPage}) => {
   let {img, name, status, birthday, nickname} = person;
   return (isError ? <Error/> : isLoader ? <Loader/> :
+    <div className={styles.container}>
       <div className={styles.person}>
         <NavHeader isCatalogPage={isCatalogPage}/>
         <div className={styles.personImg}>
@@ -30,11 +31,12 @@ const Person = ({person, isLoader, isError,isCatalogPage}) => {
           <p>
             Цитата:
             <span>
-              Lorem djks jsk njk nsjk skj sj kjcnsjks kjkj jk sjk sjkcnjk  sjks jks c sd kbjhsbdbhjsdh hjshdbj sbjds
+              {quote}
             </span>
           </p>
         </div>
       </div>
+    </div>
   );
 };
 export default Person;

@@ -1,50 +1,54 @@
 @import "./src/assets/mixins";
 @import "./src/assets/vars";
-.person {
-  display: flex;
-  justify-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
+.container {
   @include container;
-  .personImg {
-    width: 40%;
-    max-width: 32rem;
-    max-height: 30rem;
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      padding: 0;
+  margin: 0;
+  .person {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    .personImg {
+      width: 35%;
+      flex: 1 0 auto;
+      max-width: 36rem;
+      max-height: 32rem;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 0;
+      }
     }
-  }
-  .personName {
-    display: block;
-    font-size: $fs-large;
-    color: $color-main;
-  }
-  .personInfo {
-    width: 50%;
-    padding: 0.5rem 0 0.5rem 2rem;
-    text-align: left;
-    & p {
+    .personName {
       display: block;
-      width: 70%;
-      margin: 1rem 0 0 1rem;
-      font-size: $fs-main;
-      color: $grey;
-      line-height: $lh-main;
-    }
-    & span {
-      margin: 1rem 0 0 1rem;
+      font-size: $fs-large;
       color: $color-main;
     }
-    .personStatus {
-      @include statusStyle();
-    }
-    .personDate {
-      @include dateStyle();
-      font-size: $fs-main;
+    .personInfo {
+      width: 50%;
+      padding: 0.5rem 0 0.5rem 2rem;
+      text-align: left;
+      & p {
+        display: block;
+        width: 70%;
+        margin: 1rem 0 0 1rem;
+        font-size: $fs-main;
+        color: $grey;
+        line-height: $lh-main;
+      }
+      & span {
+        margin: 1rem 0 0 1rem;
+        color: $color-main;
+      }
+      .personStatus {
+        @include statusStyle();
+      }
+      .personDate {
+        @include dateStyle();
+        font-size: $fs-main;
+      }
     }
   }
 }
@@ -66,21 +70,25 @@
   }
 }
 @media (max-width: 600px) {
-  .person {
-    padding: 0 1rem 2rem 0;
-    .personInfo {
-      padding: 16px 0 8px 16px;
-      & p, & span {
-        margin: 10px 0 0 16px;
+  .container {
+    .person {
+      flex-direction: column;
+      align-items: center;
+      .personImg {
+        width: 100%;
+      }
+      .personInfo {
+        width: 100%;
+        padding: 16px 0 8px 0;
+        & p, & span {
+          margin: 10px 0 0 0;
+        }
       }
     }
   }
 }
 @media (max-width: 470px) {
   .person {
-    .personImg {
-      width: 100%;
-    }
     .personName {
       padding: 20px 0 0 0;
     }

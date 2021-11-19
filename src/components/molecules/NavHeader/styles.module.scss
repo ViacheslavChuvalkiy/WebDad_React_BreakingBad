@@ -1,7 +1,7 @@
-@import "./src/assets/vars";
-@import "./src/assets/mixins";
+@import "./src/assets/index";
 .navHeader {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 4rem;
   .hide {
@@ -19,7 +19,7 @@
     &:before {
       content: '\2190';
       position: absolute;
-      margin: 0.7rem 0 0 0;
+      margin: -0.4rem 0 0 0;
       color: $yellow;
       font-size: $fs-big;
     }

@@ -1,5 +1,6 @@
 const initialState = {
   cardList: [],
+  pageView: 'grid',
   isLoadingData: false,
   isError: null
 };
@@ -19,6 +20,11 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         isError: action
+      };
+    case 'PAGE_VIEW_CHANGED':
+      return {
+        ...state,
+        pageView: action.gridView
       };
     default:
       return state

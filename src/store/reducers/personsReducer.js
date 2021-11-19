@@ -13,16 +13,6 @@ function personsReducer(state = initialState, action) {
         ...state,
         persons: action.persons
       };
-    case 'IS_LOADING_QUOTE':
-      return {
-        ...state,
-        isLoadingQuote: action.isLoadingQuote
-      };
-    case 'IS_ERROR_QUOTE':
-      return {
-        ...state,
-        isErrorQuote: action
-      };
     case 'PERSON_QUOTE_LOADED':
       return {
         ...state,

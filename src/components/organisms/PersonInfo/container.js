@@ -10,17 +10,15 @@ const PersonContainer = () => {
   const isLoader = useSelector((state) => state.personsReducer.isLoadingData);
   const isError = useSelector((state) => state.personsReducer.isError);
   const quote = useSelector((state) => state.personsReducer.quote);
-  const isLoaderQuote = useSelector((state) => state.personsReducer.isLoaderQuote);
-  const isErrorQuote = useSelector((state) => state.personsReducer.isErrorQuote);
   const {id} = useParams();
 
   useEffect(() => {
     dispatch(getPersonsData());
   }, [dispatch]);
+
   const person = persons.length ? persons.filter((item) => item.char_id == id)[0] : [];
 
   useEffect(() => {
-    console.log('disp', person.name)
     if (person.name){
       dispatch(getPersonQuote(person.name));
     }
@@ -31,9 +29,7 @@ const PersonContainer = () => {
     isLoader={isLoader}
     isError={isError}
     quote={quote}
-    isLoaderQuote={isLoaderQuote}
-    isErrorQuote={isErrorQuote}
-    isCatalogPage = {false}
+    isCatalogPage={false}
   />;
 };
 export const container = PersonContainer;

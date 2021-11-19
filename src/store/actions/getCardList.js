@@ -9,6 +9,9 @@ export function isError(value) {
 export function сardListLoaded(value) {
   return {type: "CARD_LIST_LOADED", cardList: value}
 }
+export function pageViewChanged(value) {
+  return {type: "PAGE_VIEW_CHANGED", gridView: value}
+}
 export const getCardListData = () => async (dispatch) => {
   dispatch(isLoadingData(true));
   const {value, error} = await Repository.APICardList.getCardList();

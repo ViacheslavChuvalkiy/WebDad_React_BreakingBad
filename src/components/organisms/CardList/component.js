@@ -5,8 +5,10 @@ import Error from "../../atoms/Error";
 import styles from "./styles.module.scss";
 import { Link } from "react-router-dom";
 import NavHeader from "../../molecules/NavHeader";
+import CatalogHeader from "../../atoms/CatalogHeader";
+import CatalogTittle from "../../atoms/CatalogTittle";
 
-const CardList = ({ cardList, isLoader, isError,isCatalogPage }) => {
+const CardList = ({ cardList, isLoader, isError,isCatalogPage,pageView }) => {
   return isError ? (
     <Error />
   ) : isLoader ? (
@@ -14,15 +16,22 @@ const CardList = ({ cardList, isLoader, isError,isCatalogPage }) => {
   ) : (
     <div className={styles.container}>
       <NavHeader isCatalogPage={isCatalogPage}/>
-      <div className={styles.cardList}>
-        {cardList.map((item) => (
-          <Link to={`/person/${item.char_id}`} className={styles.personLink}>
+      {isCatalogPage ?
+        <CatalogHeader/>: ''
+      }
+      {isCatalogPage && pageView === 'list' ?
+        <CatalogTittle/> : ''
+      }
+      <div className={ pageView === 'grid' ? styles.cardGrid : styles.cardList}>
+        {cardList.map((item, i) => (
+          <Link to={`/person/${item.char_id}`} className={styles.personLink} key = {i}>
             <Card
               key={item.char_id}
               img={item.img}
               name={item.name}
               status={item.status}
               birthday={item.birthday}
+              pageView = {pageView}
             />
           </Link>
         ))}

@@ -42,3 +42,9 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin gridHeaderStyle {
+  display: grid;
+  grid-template-columns: 7rem 9rem 13rem auto;
+  gap: 1.5rem;
+}

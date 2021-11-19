@@ -8,6 +8,7 @@ const CardsContainer = () => {
   const cardList = useSelector((state) => state.cardListReducer.cardList);
   const isLoader = useSelector((state) => state.cardListReducer.isLoadingData);
   const isError = useSelector((state) => state.cardListReducer.isError);
+  const pageView = useSelector((state) => state.cardListReducer.pageView);
   useEffect(() => {
     dispatch(getCardListData());
   }, [dispatch]);
@@ -16,6 +17,7 @@ const CardsContainer = () => {
     isLoader={isLoader}
     isError={isError}
     isCatalogPage = {true}
+    pageView = {pageView}
   />;
 };
 export const container = CardsContainer;

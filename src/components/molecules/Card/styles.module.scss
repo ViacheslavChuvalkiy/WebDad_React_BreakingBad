@@ -1,5 +1,4 @@
-@import "./src/assets/mixins";
-@import "./src/assets/vars";
+@import "./src/assets/index";
 .card {
   display: flex;
   justify-items: center;
@@ -34,6 +33,35 @@
     .cardDate {
       @include dateStyle();
     }
+  }
+}
+.cardList{
+  @include gridHeaderStyle;
+  grid-auto-rows: 5rem;
+  margin-top: 1rem;
+  align-items: center;
+
+  .cardImg {
+    flex: 0 0 7.5rem;
+    height: 100%;
+    img {
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+      padding: 0;
+    }
+  }
+    .cardName {
+      color: inherit;
+      text-decoration: none;
+    }
+    .cardStatus {
+      @include statusStyle();
+      height: max-content;
+    }
+    .cardDate {
+      padding: 0 0.5rem;
+      @include dateStyle();
   }
 }
 @media (max-width: 1155px) {

@@ -18,7 +18,7 @@ const NavHeader = ({isCatalogPage}) => {
       </Link>
     </div>
   );
-}
+};
 export default NavHeader;
 
 

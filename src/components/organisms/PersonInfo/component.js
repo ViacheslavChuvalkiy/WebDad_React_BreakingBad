@@ -4,7 +4,7 @@ import Error from "../../atoms/Error";
 import Loader from "../../atoms/Loader";
 import NavHeader from "../../molecules/NavHeader";
 
-const Person = ({person,quote,isLoader, isError, isLoaderQuote, isErrorQuote,isCatalogPage}) => {
+const Person = ({person,quote,isLoader, isError,isCatalogPage}) => {
   let {img, name, status, birthday, nickname} = person;
   return (isError ? <Error/> : isLoader ? <Loader/> :
     <div className={styles.container}>

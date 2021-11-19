@@ -1,0 +1,9 @@
+@import "./src/assets/index";
+.header{
+  @include flexStyle;
+  height: auto;
+  .tittle{
+    font-size: $fs-large;
+    font-weight: 500;
+  }
+}

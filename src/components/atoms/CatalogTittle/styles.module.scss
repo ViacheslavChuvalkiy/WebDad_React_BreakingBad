@@ -1,6 +1,23 @@
 @import "./src/assets/index";
-.header{
+.header {
   @include gridHeaderStyle;
   margin: 2rem 0 1rem 0;
   height: auto;
+}
+@media (max-width: 700px) {
+  .header {
+    grid-template-columns: max(6rem) max(7rem) max(9rem) auto;
+    grid-gap: 0.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .header {
+    grid-template-columns: max(6rem) max(6rem) max(5rem) auto;
+  }
+}
+@media (max-width: 460px) {
+  .header {
+    grid-template-columns: max(5rem) max(5rem) max(5rem) auto;
+    font-size: $fs-small;
+  }
 }

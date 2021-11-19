@@ -12,12 +12,12 @@
   .cardImg {
     flex: 0 0 7.5rem;
     height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        padding: 0;
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 0;
+    }
   }
   .cardInfo {
     padding: 1rem;
@@ -35,12 +35,11 @@
     }
   }
 }
-.cardList{
+.cardList {
   @include gridHeaderStyle;
   grid-auto-rows: 5rem;
   margin-top: 1rem;
   align-items: center;
-
   .cardImg {
     flex: 0 0 7.5rem;
     height: 100%;
@@ -51,21 +50,41 @@
       padding: 0;
     }
   }
-    .cardName {
-      color: inherit;
-      text-decoration: none;
-    }
-    .cardStatus {
-      @include statusStyle();
-      height: max-content;
-    }
-    .cardDate {
-      padding: 0 0.5rem;
-      @include dateStyle();
+  .cardName {
+    color: inherit;
+    text-decoration: none;
+  }
+  .cardStatus {
+    @include statusStyle();
+    height: max-content;
+  }
+  .cardDate {
+    padding: 0 0.5rem;
+    @include dateStyle();
   }
 }
 @media (max-width: 1155px) {
   .cardName {
     min-height: 3rem;
+  }
+}
+@media (max-width: 700px) {
+  .cardList {
+    grid-template-columns: max(6rem) max(7rem) max(9rem) auto;
+    grid-gap: 0.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .cardList {
+    grid-template-columns: max(6rem) max(6rem) max(5rem) auto;
+  }
+}
+@media (max-width: 460px) {
+  .cardList {
+    grid-template-columns: max(5rem) max(5rem) max(5rem) auto;
+    font-size: $fs-small;
+    .cardStatus {
+      padding: 0.3rem 0.5rem;
+    }
   }
 }

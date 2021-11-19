@@ -1,9 +1,16 @@
 @import "./src/assets/index";
-.header{
+.header {
   @include flexStyle;
   height: auto;
-  .tittle{
+  .tittle {
     font-size: $fs-large;
     font-weight: 500;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    .tittle {
+      font-size: $fs-big;
+    }
   }
 }

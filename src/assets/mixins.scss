@@ -36,15 +36,13 @@
 @mixin hoverCardStyle() {
   box-shadow: 0 0.2rem 0.3rem 0.3rem $color-hoverBoxShadow;
 }
-
 @mixin flexStyle() {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 @mixin gridHeaderStyle {
   display: grid;
-  grid-template-columns: 7rem 9rem 13rem auto;
+  grid-template-columns: max(7rem) max(9rem) max(13rem) auto;
   gap: 1.5rem;
 }

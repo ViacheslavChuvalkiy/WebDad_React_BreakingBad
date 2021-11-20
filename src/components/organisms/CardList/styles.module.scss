@@ -20,18 +20,24 @@
   }
 }
 @media (max-width: 1250px) {
-  .cardGrid {
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+  .container {
+    .cardGrid {
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+    }
   }
 }
 @media (max-width: 905px) {
-  .cardGrid {
-    grid-template-columns: repeat(2, 4fr);
+  .container {
+    .cardGrid {
+      grid-template-columns: repeat(2, 4fr);
+    }
   }
 }
 @media (max-width: 528px) {
+  .container {
   .cardGrid {
     grid-template-columns: repeat(1, 5fr);
   }
+}
 }

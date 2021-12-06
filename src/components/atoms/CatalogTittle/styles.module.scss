@@ -12,12 +12,16 @@
 }
 @media (max-width: 550px) {
   .header {
-    grid-template-columns: max(6rem) max(6rem) max(5rem) auto;
+    grid-template-columns: max(7rem) max(7rem) auto;
+
+    & span:last-child{
+      display: none;
+    }
   }
 }
 @media (max-width: 460px) {
   .header {
-    grid-template-columns: max(5rem) max(5rem) max(5rem) auto;
+    grid-template-columns: max(6rem) max(6rem) auto;
     font-size: $fs-small;
   }
 }

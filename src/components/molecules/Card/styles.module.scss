@@ -76,12 +76,15 @@
 }
 @media (max-width: 550px) {
   .cardList {
-    grid-template-columns: max(6rem) max(6rem) max(5rem) auto;
+    grid-template-columns: max(7rem) max(7rem) auto;
+    .cardDate{
+      display: none;
+    }
   }
 }
 @media (max-width: 460px) {
   .cardList {
-    grid-template-columns: max(5rem) max(5rem) max(5rem) auto;
+    grid-template-columns: max(6rem) max(6rem) auto;
     font-size: $fs-small;
     .cardStatus {
       padding: 0.3rem 0.5rem;

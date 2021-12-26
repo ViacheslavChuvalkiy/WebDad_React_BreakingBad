@@ -12,6 +12,7 @@ export function personsLoaded(value) {
 export function personQuoteLoaded(value) {
   return {type: "PERSON_QUOTE_LOADED", quote: value}
 }
+
 export const getPersonsData = () => async (dispatch) => {
   dispatch(isLoadingData(true));
   let {value, error} = await Repository.APIPersons.getPersons();

@@ -22,7 +22,7 @@ const PersonContainer = () => {
     if (person.name){
       dispatch(getPersonQuote(person.name));
     }
-  }, [person]);
+  }, [dispatch,person]);
 
   return <Person
     person={person}

@@ -6,11 +6,17 @@ export function isLoadingData(value) {
 export function isError(value) {
   return {type: "IS_ERROR", value}
 }
-export function сardListLoaded(value) {
+export function cardListLoaded(value) {
   return {type: "CARD_LIST_LOADED", cardList: value}
 }
 export function pageViewChanged(value) {
   return {type: "PAGE_VIEW_CHANGED", gridView: value}
+}
+export function setCurrentPage(value) {
+  return {type: "SET_CURRENT_PAGE", currentPage: value}
+}
+export function setCardTempListData() {
+  return {type: "SET_TEMP_CARD_LIST"}
 }
 export const getCardListData = () => async (dispatch) => {
   dispatch(isLoadingData(true));
@@ -19,6 +25,7 @@ export const getCardListData = () => async (dispatch) => {
     dispatch(isError(true));
     dispatch(isLoadingData(false));
   }
-  dispatch(сardListLoaded(value));
+  dispatch(cardListLoaded(value));
+  dispatch(setCardTempListData());
   dispatch(isLoadingData(false));
 };

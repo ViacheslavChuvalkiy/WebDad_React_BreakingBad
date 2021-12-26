@@ -1,0 +1,23 @@
+@import "../../../assets/index.scss";
+#prev {
+  background-image: url("../../../assets/images/left.png");
+}
+#next {
+  background-image: url("../../../assets/images/right.png");
+}
+.pagBtn, .currentBtn, .arrowPag {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.1rem;
+  padding: 0.2rem 0.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: $bg-fc;
+  cursor: pointer;
+}
+.currentBtn{
+  color: $yellow;
+  background-color: $white;
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+

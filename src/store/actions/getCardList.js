@@ -18,6 +18,9 @@ export function setCurrentPage(value) {
 export function setCardTempListData() {
   return {type: "SET_TEMP_CARD_LIST"}
 }
+export function setCardPerPage(value) {
+  return {type: "SET_CARD_PER_PAGE", cardPerPage: value }
+}
 export const getCardListData = () => async (dispatch) => {
   dispatch(isLoadingData(true));
   const {value, error} = await Repository.APICardList.getCardList();

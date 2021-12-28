@@ -41,8 +41,18 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin flexStyleCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @mixin gridHeaderStyle {
   display: grid;
   grid-template-columns: max(7rem) max(9rem) max(13rem) auto;
   gap: 1.5rem;
+}
+@mixin currentOption() {
+color: $yellow;
+background-color: $white;
+box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
 }

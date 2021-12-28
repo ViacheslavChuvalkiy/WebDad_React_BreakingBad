@@ -5,7 +5,8 @@ const initialState = {
   currentPage: 1,
   cardPerPage: 10,
   isLoadingData: false,
-  isError: null
+  isError: null,
+  optionsCardPerPage : [5,10,15,20]
 };
 function cardListReducer(state = initialState, action) {
   switch (action.type) {
@@ -32,7 +33,12 @@ function cardListReducer(state = initialState, action) {
     case 'SET_CURRENT_PAGE':
       return {
         ...state,
-        currentPage: action.currentPage
+        currentPage: +action.currentPage
+      };
+    case 'SET_CARD_PER_PAGE':
+      return {
+        ...state,
+        cardPerPage: +action.cardPerPage
       };
     case 'SET_TEMP_CARD_LIST':
       return {

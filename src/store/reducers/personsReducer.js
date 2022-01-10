@@ -1,5 +1,4 @@
 const initialState = {
-  persons: [],
   quote: '',
   isLoadingData: false,
   isError: null,
@@ -8,11 +7,6 @@ const initialState = {
 };
 function personsReducer(state = initialState, action) {
   switch (action.type) {
-    case 'PERSONS_LOADED':
-      return {
-        ...state,
-        persons: action.persons
-      };
     case 'PERSON_QUOTE_LOADED':
       return {
         ...state,

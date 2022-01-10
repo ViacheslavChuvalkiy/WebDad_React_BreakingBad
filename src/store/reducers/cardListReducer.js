@@ -6,7 +6,8 @@ const initialState = {
   cardPerPage: 10,
   isLoadingData: false,
   isError: null,
-  optionsCardPerPage : [5,10,15,20]
+  optionsCardPerPage : [5,10,15,20],
+  currentFilter: ''
 };
 function cardListReducer(state = initialState, action) {
   switch (action.type) {
@@ -40,10 +41,18 @@ function cardListReducer(state = initialState, action) {
         ...state,
         cardPerPage: +action.cardPerPage
       };
+    case 'SET_CURRENT_FILTER' :
+      return {
+        ...state,
+        currentFilter: action.currentFilter
+      };
     case 'SET_TEMP_CARD_LIST':
       return {
         ...state,
-        tempCardList: state.cardList.slice(state.currentPage === 1 ? 0 : state.currentPage * state.cardPerPage - state.cardPerPage, state.currentPage * state.cardPerPage)
+        tempCardList:  state.cardList.filter((item) => state.currentFilter === '' || item.name.toUpperCase().includes(state.currentFilter.toUpperCase())).slice(
+          state.currentPage === 1 ?
+            0 : state.currentPage * state.cardPerPage - state.cardPerPage,
+          state.currentPage * state.cardPerPage)
       };
     default:
       return state

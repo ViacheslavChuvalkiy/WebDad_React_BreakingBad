@@ -8,14 +8,14 @@ import NavHeader from "../../molecules/NavHeader";
 import CatalogHeader from "../../atoms/CatalogHeader";
 import CatalogTittle from "../../atoms/CatalogTittle";
 
-const CardList = ({ cardList, isLoader, isError,isCatalogPage,pageView }) => {
+const CardList = ({ cardList, isLoader, isError,isCatalogPage,pageView,searchHandler,inputEl}) => {
   return isError ? (
     <Error />
   ) : isLoader ? (
     <Loader />
   ) : (
     <div className={styles.container}>
-      <NavHeader isCatalogPage={isCatalogPage}/>
+      <NavHeader isCatalogPage={isCatalogPage} searchHandler = {searchHandler} inputEl = {inputEl}/>
       {isCatalogPage ?
         <CatalogHeader/>: ''
       }

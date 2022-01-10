@@ -21,6 +21,9 @@ export function setCardTempListData() {
 export function setCardPerPage(value) {
   return {type: "SET_CARD_PER_PAGE", cardPerPage: value }
 }
+export function setCurrentFilter(value) {
+  return {type: "SET_CURRENT_FILTER", currentFilter: value }
+}
 export const getCardListData = () => async (dispatch) => {
   dispatch(isLoadingData(true));
   const {value, error} = await Repository.APICardList.getCardList();

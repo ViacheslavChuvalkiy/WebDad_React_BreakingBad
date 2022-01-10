@@ -9,8 +9,11 @@ const PaginationContainer = () => {
   const dispatch = useDispatch();
   const currentPage = useSelector((state) => state.cardListReducer.currentPage);
   const cardPerPage = useSelector((state) => state.cardListReducer.cardPerPage);
-  const personsCount = useSelector((state) => state.cardListReducer.cardList.length);
+  const currentFilter = useSelector((state) => state.cardListReducer.currentFilter);
+  const cardList = useSelector((state) => state.cardListReducer.cardList);
   const optionsCardPerPage = useSelector((state) => state.cardListReducer.optionsCardPerPage);
+
+  const personsCount = currentFilter === '' ? cardList.length: cardList.filter(item => item.name.toUpperCase().includes(currentFilter.toUpperCase())).length;
   const btnCount = Math.trunc(personsCount / cardPerPage);
 
   const changeCardPerPage = (value) => {
@@ -33,6 +36,8 @@ const PaginationContainer = () => {
       dispatch(setCardTempListData());
     }
   };
+
+  console.log('pag')
 
   let buttons = [];
   if (btnCount && btnCount > 1) {

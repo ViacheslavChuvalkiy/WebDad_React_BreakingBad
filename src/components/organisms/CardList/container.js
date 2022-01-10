@@ -1,7 +1,7 @@
-import {React, useEffect} from "react";
+import {React, useEffect,useRef} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import CardList from "./component";
-import {getCardListData} from '../../../store/actions/getCardList'
+import {getCardListData, setCardTempListData, setCurrentFilter} from '../../../store/actions/getCardList'
 
 const CardsContainer = () => {
   const dispatch = useDispatch();
@@ -14,12 +14,21 @@ const CardsContainer = () => {
     dispatch(getCardListData());
   }, [dispatch]);
 
+  const inputEl = useRef(null);
+
+  const searchHandler = () => {
+    dispatch(setCurrentFilter(inputEl.current.value));
+    dispatch(setCardTempListData());
+  };
+
   return <CardList
     cardList={tempCardList}
     isLoader={isLoader}
     isError={isError}
     isCatalogPage={true}
     pageView={pageView}
+    inputEl={inputEl}
+    searchHandler={searchHandler}
   />;
 };
 export const container = CardsContainer;

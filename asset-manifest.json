@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/WebDad_React_BreakingBad/static/css/main.1edabafe.chunk.css",
+    "main.js": "/WebDad_React_BreakingBad/static/js/main.b48cac3b.chunk.js",
+    "main.js.map": "/WebDad_React_BreakingBad/static/js/main.b48cac3b.chunk.js.map",
+    "runtime-main.js": "/WebDad_React_BreakingBad/static/js/runtime-main.61f5ab4f.js",
+    "runtime-main.js.map": "/WebDad_React_BreakingBad/static/js/runtime-main.61f5ab4f.js.map",
+    "static/js/2.d16ba546.chunk.js": "/WebDad_React_BreakingBad/static/js/2.d16ba546.chunk.js",
+    "static/js/2.d16ba546.chunk.js.map": "/WebDad_React_BreakingBad/static/js/2.d16ba546.chunk.js.map",
+    "index.html": "/WebDad_React_BreakingBad/index.html",
+    "static/css/main.1edabafe.chunk.css.map": "/WebDad_React_BreakingBad/static/css/main.1edabafe.chunk.css.map",
+    "static/js/2.d16ba546.chunk.js.LICENSE.txt": "/WebDad_React_BreakingBad/static/js/2.d16ba546.chunk.js.LICENSE.txt",
+    "static/media/error.adfd1a33.gif": "/WebDad_React_BreakingBad/static/media/error.adfd1a33.gif",
+    "static/media/loading.8e3fb2aa.gif": "/WebDad_React_BreakingBad/static/media/loading.8e3fb2aa.gif",
+    "static/media/main.5a4e1da5.webp": "/WebDad_React_BreakingBad/static/media/main.5a4e1da5.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.61f5ab4f.js",
+    "static/js/2.d16ba546.chunk.js",
+    "static/css/main.1edabafe.chunk.css",
+    "static/js/main.b48cac3b.chunk.js"
+  ]
+}

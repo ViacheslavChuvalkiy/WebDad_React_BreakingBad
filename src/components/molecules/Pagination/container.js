@@ -36,9 +36,6 @@ const PaginationContainer = () => {
       dispatch(setCardTempListData());
     }
   };
-
-  console.log('pag')
-
   let buttons = [];
   if (btnCount && btnCount > 1) {
 
